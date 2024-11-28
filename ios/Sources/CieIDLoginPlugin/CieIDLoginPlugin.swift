@@ -14,10 +14,7 @@ public class CieIDLoginPlugin: CAPPlugin, CAPBridgedPlugin {
     ]
     private let implementation = CieIDLogin()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func loginWithCieID(_ call: CAPPluginCall) {
+        call.unimplemented("Not implemented on iOS.")
     }
 }
